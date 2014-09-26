@@ -5,13 +5,13 @@ SYNOPSIS
         # as exported function
         use Data::Validate::Terrorist qw/is_terrorist/;
 
-        print 'BAD' if is_terrorist($name);
+        print 'BAD' if is_terrorist($first_name, $last_name);
 
         # as OO
         use Data::Validate::Terrorist;
 
         my $validator = Data::Validate::Terrorist->new;
-        print 'BAD' if $validator->is_terrorist($name);
+        print 'BAD' if $validator->is_terrorist("$last_name $first_name");
 
 DESCRIPTION
     Data::Validate::Terrorist is a simple validitor to validate a name
@@ -26,7 +26,17 @@ DESCRIPTION
 
 METHODS
   is_terrorist
-    only accept $name. return 1 for yes, 0 for no.
+        is_terrorist($last_name, $first_name);
+        is_terrorist($first_name, $last_name);
+        is_terrorist("$last_name $first_name");
+
+    when one string is passed, please be sure last_name is before
+    first_name.
+
+    or you can pass first_name, last_name (last_name, first_name), we'll
+    check both "$last_name $first_name" and "$first_name $last_name".
+
+    return 1 for yes, 0 for no.
 
     it will remove all non-alpha chars and compare with the list we have.
 

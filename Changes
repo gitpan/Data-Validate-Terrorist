@@ -1,4 +1,7 @@
 Revision history for Data-Validate-Terrorist
 
+0.02  2014-09-26 16:39:56 CST
+        - supports (first_name, last_name) also
+
 0.01  2014-09-26 16:04:05 CST
         - Initial release

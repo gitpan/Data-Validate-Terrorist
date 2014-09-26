@@ -27,6 +27,6 @@ resources:
   bugtracker: https://github.com/binary-com/perl-Data-Validate-Terrorist/issues
   homepage: https://github.com/binary-com/perl-Data-Validate-Terrorist
   repository: https://github.com/binary-com/perl-Data-Validate-Terrorist.git
-version: 0.01
+version: 0.02
 x_contributors:
   - 'Jean-Yves Sireau <jy@binary.com>'
